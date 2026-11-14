@@ -1,0 +1,4 @@
+# Credenciales y datos locales: nunca se suben al repositorio
+.env
+storage/logs/*
+!storage/logs/.gitkeep

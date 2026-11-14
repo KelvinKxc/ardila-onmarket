@@ -1,0 +1,13 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Carpetas y archivos internos: jamás accesibles desde el navegador
+    RewriteRule ^(app|config|database|bin|storage)(/|$) - [F,L]
+    RewriteRule (^|/)\.(env|git|htaccess) - [F,L]
+
+    # Todo lo demás se sirve desde /public
+    RewriteRule ^public/ - [L]
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

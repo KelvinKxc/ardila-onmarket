@@ -1,0 +1,34 @@
+:root{
+  --fondo:#f4f6f9; --texto:#1f2933; --suave:#667085; --borde:#d9dee5;
+  --primario:#2e86c1; --primario-osc:#256a9a; --blanco:#fff;
+  --error:#b42318; --error-fondo:#fef3f2; --exito:#067647; --exito-fondo:#ecfdf3; --aviso:#b54708; --aviso-fondo:#fffaeb;
+}
+@media (prefers-color-scheme: dark){
+  :root{--fondo:#12171d; --texto:#e6e9ee; --suave:#9aa5b1; --borde:#2b333d; --blanco:#1a2129;
+        --error-fondo:#3a1b18; --exito-fondo:#12301f; --aviso-fondo:#3a2a12; --error:#ffb4ab; --exito:#8be0b0; --aviso:#f6c778;}
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--fondo);color:var(--texto);line-height:1.5}
+.contenedor{max-width:1000px;margin:0 auto;padding:24px 16px}
+.barra{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 16px;background:var(--blanco);border-bottom:1px solid var(--borde)}
+.marca{font-weight:700;color:var(--primario);text-decoration:none}
+.barra-der{display:flex;align-items:center;gap:12px}
+.barra-der form{margin:0}
+.usuario{color:var(--suave);font-size:14px}
+h1{font-size:24px;margin:0 0 8px} h2{font-size:18px;margin:0 0 6px}
+.suave{color:var(--suave);margin:0 0 12px}
+.tarjeta{background:var(--blanco);border:1px solid var(--borde);border-radius:10px;padding:20px}
+.tarjeta-login{max-width:380px;margin:48px auto}
+.rejilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:16px}
+label{display:block;font-size:14px;font-weight:700;margin:14px 0 4px}
+input[type=text],input[type=password]{width:100%;padding:10px;border:1px solid var(--borde);border-radius:6px;font-size:16px;background:var(--blanco);color:var(--texto)}
+input:focus{outline:2px solid var(--primario);outline-offset:1px}
+.btn{display:inline-block;border:0;border-radius:6px;padding:10px 16px;font-size:15px;cursor:pointer;text-decoration:none}
+.btn-primario{background:var(--primario);color:#fff;margin-top:18px;width:100%;text-align:center}
+.btn-primario:hover{background:var(--primario-osc)}
+.btn-claro{background:transparent;color:var(--texto);border:1px solid var(--borde);padding:6px 12px;font-size:14px}
+.mensaje{padding:10px 14px;border-radius:6px;margin-bottom:16px;border:1px solid}
+.mensaje-error{background:var(--error-fondo);color:var(--error);border-color:var(--error)}
+.mensaje-exito{background:var(--exito-fondo);color:var(--exito);border-color:var(--exito)}
+.mensaje-aviso{background:var(--aviso-fondo);color:var(--aviso);border-color:var(--aviso)}
+.etiqueta{display:inline-block;font-size:12px;padding:2px 8px;border-radius:99px;border:1px solid var(--borde);color:var(--suave)}

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= e(($titulo ?? '') !== '' ? $titulo . ' · ' : '') ?><?= e(config('nombre')) ?></title>
     <link rel="stylesheet" href="<?= e(asset('css/app.css')) ?>">
+    <link rel="stylesheet" href="<?= e(asset('css/modulos.css')) ?>">
 </head>
 <body>
 <?php $u = usuario_actual(); ?>
@@ -27,6 +28,7 @@
         <div class="mensaje mensaje-<?= e($f['tipo']) ?>" role="alert"><?= e($f['mensaje']) ?></div>
     <?php endforeach; ?>
     <?= $contenido ?>
+    
 </main>
 </body>
 </html>
